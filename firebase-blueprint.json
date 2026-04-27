@@ -1,0 +1,36 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "A construction project.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "code": { "type": "string" },
+        "location": { "type": "string" },
+        "status": { "type": "string" },
+        "progress": { "type": "number" },
+        "pm": { "type": "string" },
+        "pmName": { "type": "string" },
+        "se": { "type": "string" },
+        "seName": { "type": "string" },
+        "budget": { "type": "number" },
+        "spent": { "type": "number" },
+        "start": { "type": "string" },
+        "end": { "type": "string" },
+        "owner": { "type": "string" },
+        "contract": { "type": "string" },
+        "phone": { "type": "string" },
+        "coverImage": { "type": "string" }
+      },
+      "required": ["name", "type", "location", "status"]
+    }
+  },
+  "firestore": {
+    "/projects/{projectId}": {
+      "schema": { "$ref": "#/entities/Project" },
+      "description": "Stores construction projects."
+    }
+  }
+}

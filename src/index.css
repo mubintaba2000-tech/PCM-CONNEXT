@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Kanit", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #fcf3f1;
+  --color-brand-100: #f9e4df;
+  --color-brand-200: #f4c8bc;
+  --color-brand-300: #ee9f89;
+  --color-brand-400: #ea7a5c;
+  --color-brand-500: #e55a30;
+  --color-brand-600: #d1431a;
+  --color-brand-700: #b03411;
+  --color-brand-800: #8c2a0e;
+  --color-brand-900: #6b230f;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    @apply transition-colors duration-300;
+}
+
+.dark {
+    color-scheme: dark;
+}
+
+.dark body {
+    @apply bg-gray-900 text-gray-100;
+}
+
+/* Global Dark Mode Overrides for generated components */
+@layer utilities {
+    .dark .bg-white {
+        @apply bg-gray-800;
+    }
+    .dark .bg-gray-50 {
+        @apply bg-gray-900/50;
+    }
+    .dark .bg-gray-100 {
+        @apply bg-gray-800;
+    }
+    .dark .text-gray-900 {
+        @apply text-white;
+    }
+    .dark .text-gray-800 {
+        @apply text-gray-100;
+    }
+    .dark .text-gray-700 {
+        @apply text-gray-200;
+    }
+    .dark .text-gray-600 {
+        @apply text-gray-300;
+    }
+    .dark .text-gray-500 {
+        @apply text-gray-400;
+    }
+    .dark .border-gray-100, .dark .border-gray-200 {
+        @apply border-gray-700;
+    }
+    .dark input, .dark select, .dark textarea {
+        @apply bg-gray-800 border-gray-700 text-white placeholder-gray-500;
+    }
+    .dark .shadow-sm, .dark .shadow, .dark .shadow-md, .dark .shadow-lg {
+        @apply shadow-black/40 border-gray-700;
+    }
+    .dark .bg-brand-50 {
+        @apply bg-brand-900/20 text-brand-300;
+    }
+    .dark .text-brand-600, .dark .text-brand-700 {
+        @apply text-brand-400;
+    }
+    .dark .border-brand-200, .dark .border-brand-100 {
+        @apply border-brand-800/50;
+    }
+
+    .dark .bg-blue-50 { @apply bg-blue-900/20 text-blue-300; }
+    .dark .text-blue-900 { @apply text-blue-300; }
+    .dark .text-blue-500 { @apply text-blue-400; }
+    .dark .border-blue-200 { @apply border-blue-800/50; }
+
+    .dark .bg-red-50 { @apply bg-red-900/20 text-red-300; }
+    .dark .text-red-900 { @apply text-red-300; }
+    .dark .text-red-500 { @apply text-red-400; }
+    .dark .border-red-200 { @apply border-red-800/50; }
+
+    .dark .bg-orange-50 { @apply bg-orange-900/20 text-orange-300; }
+    .dark .text-orange-900 { @apply text-orange-300; }
+    .dark .text-orange-600, .dark .text-orange-700 { @apply text-orange-400; }
+    .dark .border-orange-200, .dark .border-orange-300 { @apply border-orange-800/50; }
+
+    .dark .bg-purple-50 { @apply bg-purple-900/20 text-purple-300; }
+    .dark .text-purple-900 { @apply text-purple-300; }
+    .dark .text-purple-500 { @apply text-purple-400; }
+    .dark .border-purple-200 { @apply border-purple-800/50; }
+
+    .dark .bg-green-50 { @apply bg-green-900/20 text-green-300; }
+    .dark .text-green-900 { @apply text-green-300; }
+    .dark .text-green-600 { @apply text-green-400; }
+    .dark .border-green-200 { @apply border-green-800/50; }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 99px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
